@@ -1,0 +1,37 @@
+pipenv entorno virtual
+
+para windows usa py -m
+
+1) crear una carpeta para configurar el entorno
+mkdir NOMBRE_CARPETA
+2) en la carpeta
+pipenv shell
+
+-) para instalar paquetes en el entorno virtual, en la carpeta del proyento
+pipenv install NOMBRE_DE_PAQUETE
+
+-) para salir del entorno
+deactivate
+exit
+
+-) para editar ficheros
+cat NOMBRE_DE_FICHERO
+
+-) instalar un paquete externo
+pipenv install -e git+https://github.com/requests/requests.git#egg=requests
+
+-) pipenv lock
+crea el pipfile.lock para poder compartirlo, con la informacion de los paquetes
+instalados
+
+-) copiar un fichero
+cp ../demo3/Pipfile.lock
+
+-) instalar paquetes a travez del fichero pipfile.lock
+pipenv install --ignore-pipfile
+
+-) ver carpetas y ficheros mas ordenado
+ls -altr
+
+-) ver las dependencias de mi proyecto en el entorno virtual
+pipenv graph
