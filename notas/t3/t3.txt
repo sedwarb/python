@@ -1,0 +1,7 @@
+a = 5
+id(a)
+-) la funcion anterior me dice en que posicion de memoria esta esa variable
+
+-) tipos de datos inmutables
+str, int y tuple
+tuple --> mitupla = ('a','b','z')
