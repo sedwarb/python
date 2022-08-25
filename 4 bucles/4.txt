@@ -1,0 +1,43 @@
+-) para mostrar valores en un rango en el for
+for numero in range(5,10):
+	print(numero)
+
+longitud=len(lista)
+fot i in range(longitud):
+	print(lista[numero])
+
+-) en el while el continue se salta todo lo que sigue 
+despues del continue e itera
+
+-) uso del in
+lista=["hola","chao"]
+if "hola" in lista:
+	print("se encontro hola")
+
+-) ordenar una lista
+lista=[1,23,3,74]
+listaordenada=sorted(lista)
+print(listaordenada)
+listaEnReversa=sorted(lista, reverse=true)
+print(listaEnReversa)
+
+-) usando for-brake-else
+lista=["hola","mensaje","hi"]
+for i in lista:
+	if i == "mensaje":
+		print("lo encontre")
+		break
+else:
+	print("no lo encontre")
+si itera todo y no consigue la palabra se activa el
+else, si lo consigue no se activa el else
+
+-) uso de pass
+esto se usa para que continue asi haya un error en
+el codigo
+
+if x==0:
+	pass
+
+ahi si no estubiece pass mostraria un error porque
+el if esta incompleto
