@@ -16,10 +16,10 @@ if "hola" in lista:
 
 -) ordenar una lista
 lista=[1,23,3,74]
-listaordenada=sorted(lista)
-print(listaordenada)
-listaEnReversa=sorted(lista, reverse=true)
-print(listaEnReversa)
+lista.sort()
+print(lista)
+lista.sort(reverse=true)
+print(lista)
 
 -) usando for-brake-else
 lista=["hola","mensaje","hi"]

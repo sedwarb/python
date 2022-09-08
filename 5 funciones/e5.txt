@@ -1,0 +1,107 @@
+-) Manipular una variable global
+
+variableG = 12
+
+def mifuncion(nombre):
+	global variableG
+	variableG = 15
+	print(nombre, variableG)
+
+mifuncion("Victor")
+
+-) colocar un parametro de la funcion por defecto
+
+def mifuncion(nombre="juan"):
+	print(nombre)
+
+-) dar valor a un parametro especifico de una funcion
+
+def suma(a=1,b=1):
+	print(a+b)
+
+suma(b=9)
+
+-) Funcion de parametros variables
+
+def suma(*args):
+	resultado=0
+	for arg in args:
+		resultado+=arg
+	print(resultado)
+
+suma(1,2,3,4)
+
+-) colocar parametros con nombre en una funcion
+
+def suma(**kwargs):
+	for key, value in kwargs.items():
+		print(key, "=", value
+suma(vivienda="piso", coche="rojo")
+
+**Resultado...
+vivienda=piso
+coche=rojo
+
+-) usar parametros variables
+def funcion(**kwargs):
+	if kwargs['coche']=='bonito':
+		print("tu coche es bonito")
+
+funcion(coche="bonito")
+
+**otro ejemplo de kwargs
+def sumador(**kwargs):
+	inicial=kwargs['inicial']
+	final = kwargs['final'] if 'final' in kwargs else 0
+
+	resultado = 0
+	for x in range(inicial,final+1):
+		resultado+=x
+	
+	return resultado
+
+***Resultado:
+En este caso solo le paso inicial, si no coloco el condicional
+en el kwargs 'final' me da error
+print(sumador(inicial=15))
+
+-) una funcion con varios resultados en un return devuelve una tupla
+
+def operaciones(a,b):
+	return a+b,a-b,a*b,a/b
+
+resultado = operaciones(2,4)
+print(resultado)
+
+***Resultado:
+(6,-2,8,0.5)
+
+si uso la funcion pero asignando los resultados a variables, queda asi
+
+**Nota, se debe colocar el mismo numero de variables que retornos
+suma,resta,multi,divi = operaciones(2,4)
+print(suma)
+print(resta)
+print(multi)
+print(divi)
+
+***Resultado
+6
+-2
+8
+0.5
+
+-) Funcion anonima que en python es lambda
+**Es como la arrow function de js
+anonima = lambda nombre,nombre2: print("hola", nombre, "adios", nombre2)
+anonima("pepe","Juan")
+
+***Resultado:
+hola pepe adios Juan
+
+**Retorno en las funciones lambda
+suma = lambda x: x+x
+print(suma(2))
+
+***Resultado:
+4
