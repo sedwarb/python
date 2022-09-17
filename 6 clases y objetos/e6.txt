@@ -1,0 +1,164 @@
+-) Clases
+class Dino:
+	encendido=False
+	
+	def encender(self):
+		pass
+
+d = Dino()
+d.encendido = False
+print(d.encendido)
+
+***Resultado:
+False
+
+-) usando propiedades de una clase en un metodo de una clase
+Se usa self. y el nombre de la propiedad de la clase para 
+manipular esta dentro de un metodo de clase
+class Dino:
+	encendido=True
+	
+	def apagar(self):
+		self.encendido = False
+
+d = Dino()
+d.apagar()
+print(d.encendido)
+
+***Resultado:
+False
+
+
+-) Clases estaticas, comparter un mismo espacio de memoria
+
+class Estatica:
+	numero=1
+
+	def incrementa():
+		Estatica.numero+=1
+
+Estatica.incrementa()
+print(Estatica.numero)
+
+***Resultado:
+2
+
+Estatica.incrementa()
+print(Estatica.numero)
+
+***Resultado:
+3
+
+Estatica.incrementa()
+print(Estatica.numero)
+
+***Resultado:
+4
+
+al ejecutarla se modifican las propiedades de la clase
+
+-) Herencia
+
+para heredar las propiedades y metodos de otra(s) clase(s) se coloca
+entre parentesis de la nueva clase, las clases que quiere heredar
+
+class Juguete:
+	encendido=False
+
+	def apagar(self):
+		self.encendido=True
+	def encender(self):
+		self.encendido=False
+
+class SrPotato(Juguete):
+	def quitarOreja(self):
+		pass
+
+print(dir(SrPotato))
+
+***Resultado
+
+muestra todas las propiedades y metodos que ha heredado
+
+-) Construcctor en clase
+el constructor recive parametros que modifican las propiedades
+
+class Juguete:
+	nombre=none
+	def __init__(self, nombre):
+		self.nombre=nombre
+	encendido=False
+
+	def apagar(self):
+		self.encendido=True
+	def encender(self):
+		self.encendido=False
+
+p = Juguete("Edwar")
+print(p.nombre)
+
+***Resultado
+
+Edwar
+
+-) heredar el constructor del padre
+
+class Juguete:
+	nombre=none
+	def __init__(self, nombre):
+		self.nombre=nombre
+	encendido=False
+
+	def apagar(self):
+		self.encendido=True
+	def encender(self):
+		self.encendido=False
+
+class SrPotato(Juguete):
+	def __init__(self):
+		super().__init__("Edwar")
+
+
+-) Clase abstracta (no se puede instanciar)
+se debe importar abstractmethod y heredar ABC en la clase que
+sera abstracta
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+	@abstractmethod
+	def sonido(self):
+		pass
+
+para poder instanciar una clase se debe colocar el metodo
+abstracto en la clase hija
+
+class Perro(Animal):
+	def sonido(self):
+		printf("Guau")
+
+p = Perro()
+p.sonido()
+
+-) Composicion. una clase compuesta de otras clases
+
+class Motor:
+	tipo="Diesel"
+
+class Ventanas:
+	cantidad=5
+
+class Ruedas:
+	cantidad=4
+
+class Carroseria:
+	ventanas = Ventanas()
+	Ruedas = Ruedas()
+
+class Coche:
+	motor = Motor()
+	carroceria = Carroceria()
+
+c = Coche()
+print("Motor es", c.motor.tipo)
+print("Ventanas:", c.carroceria.ventanas. cantidad)
