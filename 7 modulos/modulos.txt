@@ -1,0 +1,42 @@
+comandos linux
+
+crear carpeta:
+mkdir nombre-carperta
+crear fichero vi nombre-fichero.py
+
+-) uso de modulos
+importar modulos:
+
+import nombre-modulo
+
+invocar una funcion del modulo:
+
+nombre-modulo.nombre-funcion
+
+- los modulos estaran compuestos por funciones y clases
+
+nota: las constantes se deben colocar en mayuscula
+
+-) paquete:
+
+es un directorio con un fichero especial dentro
+ese fichero especia se debe llamar: __init__.py
+
+nota: se usa dir() para ver que propiedades y metodos tiene un objeto
+
+-) funcion Global. muestra las funciones, clases, bibliotecas, entre otras
+que se estan ejecutando
+
+globals()
+
+-) pprint. es una forma de ordenar la forma en que se muestran ciertos
+objetos en pantalla, por ejemplo una biblioteca, te la muestra ordenada
+
+para usar esta funcion: 
+
+import pprint
+
+pprint("lo que se muestra")
+
+-) funcion locals(). es igual que globals pero en el ambito local donde
+se invoca
