@@ -1,0 +1,4 @@
+PASOS PARA REALIZAR EL EJERCICIO 1 MODULO 8
+1. Crear Archivo y Abrirlo
+2. Escribir dentro del Archivo
+3. Acceder dos veces al Archivo Creado

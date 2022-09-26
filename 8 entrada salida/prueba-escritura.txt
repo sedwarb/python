@@ -1,0 +1,3 @@
+lineaArray1
+lineaArray2
+lineaArray3
