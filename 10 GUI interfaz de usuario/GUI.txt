@@ -1,0 +1,12 @@
+PyGTK
+https://es.wikipedia.org/wiki/PyGTK
+
+PyQt
+https://es.wikipedia.org/wiki/PyQt
+
+WxPython
+https://es.wikipedia.org/wiki/WxPython
+
+Tkinter
+https://es.wikipedia.org/wiki/Tkinter
+
