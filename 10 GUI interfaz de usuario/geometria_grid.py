@@ -1,4 +1,3 @@
-from site import venv
 import tkinter
 from tkinter import ttk
 
