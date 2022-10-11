@@ -35,6 +35,7 @@ if mostrar:
 if individual:
     cursor.execute("insert into alumnos(id,nombre,apellido) values (1,'lucia','amapola')")
     conn.commit()
+    
 if insertar:
     for alumno in alumnos:
         cursor.execute(f"insert into alumnos(id,nombre,apellido) values ('{alumno['id']}','{alumno['nombre']}','{alumno['apellido']}')")    

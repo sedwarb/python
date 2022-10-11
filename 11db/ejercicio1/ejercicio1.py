@@ -11,16 +11,21 @@ alumnos = [
     {"id":8,"nombre":'elo',"apellido":'bocagrande'}
 ]
 
+insertar = False
+mostrarUno = True
+
 conn = sqlite3.connect('db.db')
 cursor = conn.cursor()
 
-rows = cursor.execute("SELECT * FROM alumnos")
+if insertar:
+    for alumno in alumnos:
+        cursor.execute(f"insert into alumnos(id,nombre,apellido) values ('{alumno['id']}','{alumno['nombre']}','{alumno['apellido']}')")    
+    conn.commit()
 
-if rows:
+if mostrarUno:
+    rows = cursor.execute("SELECT * FROM alumnos WHERE nombre='luis'")
     for row in rows:
         print(row)
-else:
-    print("Sin Datos")
 
 cursor.close()
 conn.close()
