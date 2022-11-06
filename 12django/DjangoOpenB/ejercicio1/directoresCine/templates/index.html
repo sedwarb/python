@@ -1,0 +1,11 @@
+<p>Lista de Peliculas</p>
+<ul>
+    {% for pelicula in peliculas %}
+        <li>
+            <strong><p>Nombre: </p></strong><p>{{ pelicula.nombre }}</p>
+            <strong><p>Descripcion: </p></strong><p>{{ pelicula.descripcion }}</p>
+            <strong><p>Tipo: </p></strong><p>{{ pelicula.tipo }}</p>
+            <strong><p>Director: </p></strong><p>{{ pelicula.director }}</p>
+        </li>
+    {% endfor %}
+</ul>
